@@ -27,7 +27,7 @@
     Prime test(trial division)
     Prime test(Miller-Rabin's method)
     2D Array
-    Arbitary Integer
+    Arbitrary Integer
     Linear congruential generator
     Maximum subarray problem
 
@@ -41,10 +41,10 @@
     Bubble sort
     Selection sort
     Insertion sort
+    Shell sort
     Radix sort
     Quick sort
     Merge sort
-    Heap sort
     Double linked list
     Skip list
     Self-organized linked-list ops (move-to-front, move-ahead-one)
@@ -101,3 +101,7 @@
     ZhangYou0122: Push-Relabel algorithm, Suffix Tree           
     UsingtcNower: Suffix Array
     afernandez90: AVL trees
+
+####支持此项目 ( Donations ) :     
+![donate](donate_alg.png)          
+欢迎使用支付宝扫描上面的二维码，对该项目进行捐赠。捐赠款项将用于持续优化补全及完善。 

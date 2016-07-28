@@ -24,15 +24,13 @@ public:
 	SuffixTree(string str):test_str(str), root(test_str), active_point(&root, 0, 0), remainder(0), pos(0), active_e(0), ls() {}
 	int construct(void);
 
-	// return -1 if no such sub exist, return the beginning postion of this substring in thr original string if it exist
+	// return -1 if no such sub exist, return the beginning position of this substring in thr original string if it exist
 	int search(string sub);
 
 	// return the length of the longest prefix of sub which can be matched in suffix tree
 	template <class Iterator>
 	Iterator inc_search(Iterator sub)
 	{
-		typedef typename Iterator::value_type T;	// extract real type
-
 		Iterator result = sub;
 		Node* node = &root;
 		Edge* edge = NULL;
@@ -73,13 +71,7 @@ public:
 		return result;
 	}
 
-	int print_tree(void);
-private:
-	string test_str;
-
 	struct Node;
-	typedef struct Node Node;
-
 	struct Edge{
 		// the begin and end pos of this edge, note that INT_MAX stands for #(the changing end pos of this entire string)
 		unsigned int begin, end;
@@ -146,7 +138,6 @@ private:
 
 		bool is_none(void) { return begin == 0 && end == 0; }
 	};
-	typedef struct Edge Edge;
 
 	struct Node{
 		string& test_node_str;
@@ -224,10 +215,9 @@ private:
 			return os;
 		}
 	};
-	//typedef struct Node Node;
-
-	friend struct Node;
-
+	int print_tree(void);
+private:
+	string test_str;
 	class ActivePoint{
 	public:
 		Node* active_node;
@@ -257,7 +247,7 @@ private:
 	int remainder;
 	// how many characters inserted?
 	unsigned int pos;
-	unsigned int active_e;	// the beginnig position of suffixes need to be inserted
+	unsigned int active_e;	// the beginning position of suffixes need to be inserted
 	char get_ele(int i) { return test_str[i]; }
 	// insert a char from pos to suffix tree
 	int insert();
@@ -266,7 +256,7 @@ private:
 	int print_node(Node* node, int level);
 
 
-	Node* seperate_edge(Node * node, Edge* edge);
+	Node* separate_edge(Node * node, Edge* edge);
 
 	// check if we can change active node
 	bool check_active_node(void)

@@ -13,6 +13,7 @@ LIBS = -lm
 PROGRAMS = m_based_demo \
 			integer_demo \
        		insertion_sort_demo \
+					shell_sort_demo \
        		radix_sort_demo \
        		shuffle_demo \
            	quick_sort_demo \
@@ -53,8 +54,6 @@ PROGRAMS = m_based_demo \
 			random_demo \
 			k-means_demo \
 			kmp_demo \
-			heap_sort_demo \
-			kruskal_mst_demo \
 			LRU_cache_demo \
 			base64_demo	\
 			max_subarray_demo \
@@ -81,6 +80,9 @@ integer_demo: $(SRCDIR)/integer_demo.cpp
 	$(CPP) $(CFLAGS) -o $@ $^ $(INCLUDEDIR) $(LIBS)
 
 insertion_sort_demo: $(SRCDIR)/insertion_sort_demo.cpp
+	$(CPP) $(CFLAGS) -o $@ $^ $(INCLUDEDIR) $(LIBS)
+
+shell_sort_demo: $(SRCDIR)/shell_sort_demo.cpp
 	$(CPP) $(CFLAGS) -o $@ $^ $(INCLUDEDIR) $(LIBS)
 
 radix_sort_demo: $(SRCDIR)/radix_sort_demo.cpp
@@ -207,9 +209,6 @@ k-means_demo: $(SRCDIR)/k-means_demo.cpp
 	$(CPP) $(CFLAGS) -o $@ $^ $(INCLUDEDIR) $(LIBS)
 
 kmp_demo : $(SRCDIR)/kmp_demo.cpp
-	$(CPP) $(CFLAGS) -o $@ $^ $(INCLUDEDIR) $(LIBS)
-
-heap_sort_demo: $(SRCDIR)/heap_sort_demo.cpp
 	$(CPP) $(CFLAGS) -o $@ $^ $(INCLUDEDIR) $(LIBS)
 
 kruskal_mst_demo: $(SRCDIR)/kruskal_mst_demo.cpp
